@@ -13,6 +13,13 @@
 	<version>local</version>
 	<name>test-api-gw</name>
 	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>13</java.version>
+		<kotlin.version>1.6.10</kotlin.version>
+		<spring-cloud.version>2021.0.1</spring-cloud.version>
+		<springdoc-openapi-ui.version>1.5.13</springdoc-openapi-ui.version>
+		<logstash-logback-encoder.version>6.6</logstash-logback-encoder.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.jetbrains.kotlin</groupId>
@@ -53,6 +60,7 @@
 		<dependency>
 			<groupId>net.logstash.logback</groupId>
 			<artifactId>logstash-logback-encoder</artifactId>
+			<version>${logstash-logback-encoder.version}</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
@@ -60,6 +68,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -77,20 +86,19 @@
 			<plugin>
 				<groupId>org.jetbrains.kotlin</groupId>
 				<artifactId>kotlin-maven-plugin</artifactId>
-				<version>1.6.10</version>
 				<configuration>
 					<args>
-					<arg>-Xjsr305=strict</arg>
+						<arg>-Xjsr305=strict</arg>
 					</args>
 					<compilerPlugins>
-					<plugin>spring</plugin>
+						<plugin>spring</plugin>
 					</compilerPlugins>
 				</configuration>
 				<dependencies>
 					<dependency>
-					<groupId>org.jetbrains.kotlin</groupId>
-					<artifactId>kotlin-maven-allopen</artifactId>
-					<version>1.6.10</version>
+						<groupId>org.jetbrains.kotlin</groupId>
+						<artifactId>kotlin-maven-allopen</artifactId>
+						<version>${kotlin.version}</version>
 					</dependency>
 				</dependencies>
 			</plugin>
