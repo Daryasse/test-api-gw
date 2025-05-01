@@ -117,7 +117,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: app
-          path: target/
+          path: ./
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
@@ -129,7 +129,6 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: dashasel/test-api-gw:latest
   trigger-deploy:
     runs-on: ubuntu-latest
     needs: [ calculate-version, docker ]
