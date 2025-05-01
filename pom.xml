@@ -14,7 +14,7 @@
 	<name>test-api-gw</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>13</java.version>
+		<java.version>16</java.version>
 		<kotlin.version>1.6.10</kotlin.version>
 		<spring-cloud.version>2021.0.1</spring-cloud.version>
 		<springdoc-openapi-ui.version>1.5.13</springdoc-openapi-ui.version>
