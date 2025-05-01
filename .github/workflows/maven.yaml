@@ -129,7 +129,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: Daryasee/test-api-gw
+          tags:  docker.io/dashasel/test-api-gw:latest
   trigger-deploy:
     runs-on: ubuntu-latest
     needs: [ calculate-version, docker ]
