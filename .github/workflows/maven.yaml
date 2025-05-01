@@ -114,10 +114,10 @@ jobs:
         with:
           driver-opts: network=host
       - name: Download JAR file
-        uses: actions/download-artifact@v2.1.1
+        uses: actions/download-artifact@v4
         with:
           name: app
-          path: target/
+          path: ./
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
